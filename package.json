@@ -10,7 +10,8 @@
   "types": "dist/src/index.d.ts",
   "scripts": {
     "dist": "tsc",
-    "test": "ava",
+    "test": "tsc && ava",
+    "test:run": "ava",
     "test:watch": "ava --watch"
   },
   "engines": {
