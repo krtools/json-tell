@@ -1,4 +1,4 @@
-# json-tell
+# json-tell  [![Build Status](https://travis-ci.com/krtools/json-tell.svg?branch=master)](https://travis-ci.com/krtools/json-tell)
 
 Generates TypeScript interfaces from a JSON object
 
