@@ -1,7 +1,7 @@
 {
   "name": "json-tell",
   "description": "Generates TypeScript interfaces from a JSON object",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/krtools/json-tell.git"
@@ -9,11 +9,12 @@
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
-    "dist": "tsc",
+    "dist": "yarn run clean && tsc",
     "test": "tsc && ava",
     "test:run": "ava",
     "test:watch": "ava --watch",
-    "prepublish": "rimraf \"dist/**/*.map\" dist/test"
+    "build": "yarn run clean && tsc -p tsconfig.dist.json",
+    "clean": "rimraf dist"
   },
   "engines": {
     "node": ">= 10.13.0"
