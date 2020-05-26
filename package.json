@@ -1,0 +1,32 @@
+{
+  "name": "json-tell",
+  "description": "Generates TypeScript interfaces from a JSON object",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krtools/json-tell.git"
+  },
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "dist": "tsc",
+    "test": "ava",
+    "test:watch": "ava --watch"
+  },
+  "engines": {
+    "node": ">= 10.13.0"
+  },
+  "author": "Kyle Rector <krtools@users.noreply.github.com>",
+  "license": "MIT",
+  "files": [
+    "dist/src"
+  ],
+  "devDependencies": {
+    "@ava/typescript": "^1.1.1",
+    "@types/node": "^14.0.5",
+    "@types/prettier": "^2.0.1",
+    "ava": "^3.8.2",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.3"
+  }
+}
