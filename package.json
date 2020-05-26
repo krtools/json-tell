@@ -12,7 +12,8 @@
     "dist": "tsc",
     "test": "tsc && ava",
     "test:run": "ava",
-    "test:watch": "ava --watch"
+    "test:watch": "ava --watch",
+    "prepublish": "rimraf \"dist/**/*.map\" dist/test"
   },
   "engines": {
     "node": ">= 10.13.0"
@@ -28,6 +29,7 @@
     "@types/prettier": "^2.0.1",
     "ava": "^3.8.2",
     "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
     "typescript": "^3.9.3"
   }
 }
