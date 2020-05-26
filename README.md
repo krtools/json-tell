@@ -1,4 +1,4 @@
-# json-tell  [![Build Status](https://travis-ci.com/krtools/json-tell.svg?branch=master)](https://travis-ci.com/krtools/json-tell)
+# json-tell  [![Build Status](https://travis-ci.com/krtools/json-tell.svg?branch=master)](https://travis-ci.com/krtools/json-tell) [![install size](https://packagephobia.now.sh/badge?p=json-tell)](https://packagephobia.now.sh/result?p=json-tell)
 
 Generates TypeScript interfaces from a JSON object
 
@@ -21,7 +21,8 @@ yarn add json-tell
 import {getTypes} from 'json-tell';
 
 const options = {
-  exported: true
+  exported: false,
+  root: 'RootObject'
 };
 
 const json = getJsonFromSomewhere();
