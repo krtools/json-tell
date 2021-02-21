@@ -25,7 +25,13 @@ test('just a boolean', (t) => {
 test('array of strings', (t) => {
   const type = getTypes(['', '']);
   t.log(type);
-  t.regex(type, /type RootObject = string\[\];/);
+  t.regex(type, /type RootObject = string\[];/);
+});
+
+test('array of string | string[]', (t) => {
+  const type = getTypes(['', ['', '']]);
+  t.log(type);
+  t.is(type, 'type RootObject = Array<string[] | string>;');
 });
 
 test('array of [string,number]', (t) => {
