@@ -76,7 +76,7 @@ function toInterface(obj: JsonObject, opts: ToInterfaceOptions = {}): string {
       types.push(stringifyArrayTypes(value.array));
     }
     const optional = value.optional ? '?' : '';
-    const pkey = /^\w+$/.test(key) ? key : `'${JSON.stringify(key).slice(1, -1).replace(/'/g, "\\'")}'`;
+    const pkey = /^[A-Za-z]\w+$/.test(key) ? key : `'${JSON.stringify(key).slice(1, -1).replace(/'/g, "\\'")}'`;
     props.push(`  ${pkey}${optional}: ${types.join(' | ')};`);
   }
   return `${exported}interface ${obj.name} {\n${props.join('\n')}\n}`;

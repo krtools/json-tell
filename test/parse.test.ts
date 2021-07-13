@@ -72,6 +72,11 @@ test('Object with quoted property', (t) => {
   });
 });
 
+test('Object with key starting with number', (t) => {
+  const ints = getTypes({'1A': 'str'}, {root: 'MyRoot'});
+  t.regex(ints, /^ *'1A'/m);
+});
+
 test('Object with non-default root name', (t) => {
   const ints = parseTypes(getTypes({str: ''}, {root: 'MyRoot'}));
   t.deepEqual(ints[0], {
